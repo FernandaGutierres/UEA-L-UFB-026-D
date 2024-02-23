@@ -1,27 +1,25 @@
-gutierresmaria=[
-           [10, 20, 30],
-
-           [40, 50, 60],
-
-           [70, 80, 90]]
-
-
-
-def sort_row(gutierresmaria, row_index):
-    if row_index < 0 or row_index >= len(gutierresmaria):
+def sort_row(gutierres , row_index):
+    if row_index < 0 or row_index >= len(gutierres):
         print("Índice de fila fuera de rango")
         return
 
-    gutierresmaria[row_index] = sorted(gutierresmaria[row_index])
+    gutierres[row_index] = sorted(gutierres[row_index])
 
-    row_index = 2  # Ordenar la segunda fila (índice 1)
+# Ejemplo de uso
+gutierres = [
+    [3, 7, 2],
+    [5, 1, 4],
+    [9, 0, 3]
+]
+# Ordenar la segunda fila (índice 1)
+row_index = 1
 
-    print("Array antes de ordenar:")
-    for row in gutierresmaria:
-        print(row)
+print("Matriz antes de ordenar:")
+for row in gutierres:
+    print(row)
 
-    sort_row(gutierresmaria, row_index)
+sort_row(gutierres, row_index)
 
-    print("\nArray después de ordenar la fila", row_index, "en orden ascendente:")
-    for row in gutierresmaria:
-        print(row)
+print("\nMatriz después de ordenar la fila", row_index, "en orden ascendente:")
+for row in gutierres:
+    print(row)
